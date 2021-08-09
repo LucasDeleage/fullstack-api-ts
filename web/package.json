@@ -24,7 +24,7 @@
   },
   "scripts": {
     "dev": "npx parcel ./src/index.html",
-    "lint": "eslint ./src"
+    "lint": "eslint ./src/ --ext .js --ext .ts"
   },
   "dependencies": {
     "styled-components": "^5.3.0"

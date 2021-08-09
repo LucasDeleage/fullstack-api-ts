@@ -18,9 +18,6 @@
    
     "rules": {
         "prettier/prettier": "error",
-    
-        // Ici vous définissez vos règles de syntaxe
-        // Retrouvez les règles sur la documentation d'ESLint
         "no-unused-vars": "warn",
         "no-console": "off",
         "func-names": "off",
