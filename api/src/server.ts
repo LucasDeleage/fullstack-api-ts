@@ -1,7 +1,7 @@
 import express from 'express'
 
 const createServer = () => {
-  const server = express()
+  const server: express.Application = express()
   return server
 }
 
