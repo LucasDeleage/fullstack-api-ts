@@ -1,5 +1,7 @@
+/* eslint-disable import/no-unresolved */
 import dotenv from 'dotenv'
 import path from 'path'
+// eslint-disable-next-line import/extensions
 import createServer from './server'
 
 const envPath: string = path.join(__dirname, '../../')
@@ -13,5 +15,4 @@ const main = async () => {
     console.log(`running on ${process.env.SERVER_PORT}`)
   })
 }
-
 main()
