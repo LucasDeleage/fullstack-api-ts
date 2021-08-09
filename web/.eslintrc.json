@@ -4,9 +4,9 @@
         "es2021": true
     },
     "extends": [
-        "eslint:recommended",
         "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended"
+        "airbnb",
+        "plugin:prettier/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -21,5 +21,19 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "prettier/prettier": "error",
+
+    // Ici vous définissez vos règles de syntaxe
+    // Retrouvez les règles sur la documentation d'ESLint
+    "no-unused-vars": "warn",
+    "no-console": "off",
+    "func-names": "off",
+    "no-process-exit": "off",
+    "object-shorthand": "off",
+    "class-methods-use-this": "off",
+
+    // Seulement si c'est un projet React
+    "react/jsx-filename-extension": [1, {"extensions": [".js", ".jsx"]}],
+    "react/jsx-one-expression-per-line": "off"
     }
 }
