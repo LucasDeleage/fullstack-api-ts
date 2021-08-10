@@ -10,20 +10,11 @@
     "watch": "npx tsc -w",
     "build": "npx tsc",
     "dev": "nodemon ./dist/index.js",
-    "start": "node ./dist/index.js",
-    "test": "npx jest",
-    "lint": "eslint ./src --ext .js --ext .ts"
+    "start": "node ./dist/index.js"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
     "@types/node": "^16.4.10",
-    "@typescript-eslint/eslint-plugin": "^4.29.0",
-    "@typescript-eslint/parser": "^4.29.0",
-    "eslint": "^7.32.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.24.0",
-    "eslint-plugin-prettier": "^3.4.0",
     "nodemon": "^2.0.12",
     "prettier": "^2.3.2",
     "ts-node": "^10.1.0",

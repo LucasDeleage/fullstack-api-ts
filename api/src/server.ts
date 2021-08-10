@@ -1,15 +1,19 @@
 import express from 'express'
+import cors from 'cors'
 import router from './router'
 import { APP_BASE_URL } from './constant'
 
-import cors from 'cors'
-
 const createServer = () => {
   const server: express.Application = express()
+
+  const corsOptions = {
+    origin: 'http://localhost:1234',
+    optionsSuccessStatus: 200,
+  }
+  server.use(cors(corsOptions))
+  server.use(express.json())
+
   server.use(APP_BASE_URL, router)
-
-  server.use(cors({ origin: 'http://localhost:1234' }))
-
   return server
 }
 
