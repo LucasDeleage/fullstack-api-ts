@@ -23,6 +23,24 @@
         "func-names": "off",
         "no-process-exit": "off",
         "object-shorthand": "off",
-        "class-methods-use-this": "off"
+        "class-methods-use-this": "off",
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "js": "never",
+                "jsx": "never",
+                "ts": "never",
+                "tsx": "never"
+            }
+        ],
+        "import/no-unused-modules": [
+            "off",
+            {
+                "ignoreExports": [],
+                "missingExports": true,
+                "unusedExports": true
+            }
+        ],
     }
 }

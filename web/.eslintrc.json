@@ -22,6 +22,23 @@
     ],
     "rules": {
         "prettier/prettier": "error",
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "js": "never",
+                "jsx": "never",
+                "ts": "never",
+                "tsx": "never"
+            }
+        ],
+    "import/no-unused-modules": ["off",
+            {
+      "ignoreExports": [],
+      "missingExports": true,
+      "unusedExports": true
+            }
+        ],
 
     // Ici vous définissez vos règles de syntaxe
     // Retrouvez les règles sur la documentation d'ESLint
@@ -31,7 +48,7 @@
     "no-process-exit": "off",
     "object-shorthand": "off",
     "class-methods-use-this": "off",
-
+    
     // Seulement si c'est un projet React
     "react/jsx-filename-extension": [1, {"extensions": [".js", ".jsx"]}],
     "react/jsx-one-expression-per-line": "off"
