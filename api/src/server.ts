@@ -1,6 +1,6 @@
 import express from 'express'
 import cors from 'cors'
-import router from './router'
+import { UserController } from './modules/user/controllers/userController'
 import { APP_BASE_URL } from './constant'
 
 const createServer = () => {
@@ -13,7 +13,9 @@ const createServer = () => {
   server.use(cors(corsOptions))
   server.use(express.json())
 
-  server.use(APP_BASE_URL, router)
+  const userRoute = new UserController()
+
+  server.use(APP_BASE_URL, userRoute.router)
   return server
 }
 
