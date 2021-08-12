@@ -37,7 +37,7 @@ export class UserController {
       return res.status(200).json({ auth: true, token, user })
     }
 
-    return res.status(404).json({ auth: false, message: user.message })
+    return res.status(403).json({ auth: false, message: user.message })
   }
 
   public privateRoute = (req: Request | any, res: Response): Object => {
