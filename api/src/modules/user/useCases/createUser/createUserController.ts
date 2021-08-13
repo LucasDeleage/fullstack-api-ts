@@ -9,7 +9,7 @@ export class CreateUserController {
     this.useCase = createUser
   }
 
-  public execute = async (req: Request, res: Response): Promise<Object> => {
+  public execute = async (req: Request, res: Response): Promise<Response> => {
     const { userName, password } = req.body
 
     if (!userName) {
@@ -21,6 +21,8 @@ export class CreateUserController {
 
     const createUser = await this.useCase.execute(req.body)
 
-    return res.status(200).json(createUser)
+    return createUser.success
+      ? res.status(201).json(createUser)
+      : res.status(400).json(createUser)
   }
 }
