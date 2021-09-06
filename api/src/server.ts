@@ -7,7 +7,7 @@ const createServer = () => {
   const server: express.Application = express()
 
   const corsOptions = {
-    origin: 'http://localhost:1234',
+    origin: 'http://localhost:3001',
     optionsSuccessStatus: 200,
   }
   server.use(cors(corsOptions))

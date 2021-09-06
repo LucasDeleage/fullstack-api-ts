@@ -1,9 +1,9 @@
-
 import { Layout } from '../components/layout'
 
-
-export default function Home():JSX.Element {
+export default function Home(): JSX.Element {
   return (
-    <Layout/>
+    <Layout>
+      <p>salut</p>
+    </Layout>
   )
 }
